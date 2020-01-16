@@ -2,26 +2,48 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'typeface-roboto';
-function App() {
-  return (
+class App extends Component {
+  render() {
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>h1. Heading, I'm Youngji</h1>
-        <h2>h2</h2>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Login Page
-        </a>
-      </header>
-    </div>
+      <form className="myForm">
+          <div className="form-group">
+            <label htmlFor="nameInput">이름</label>
+            <input
+              type="text"
+              className="form-control"
+              id="nameInput"
+              placeholder="노영지"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="emailInput">이메일</label>
+            <input
+              type="email"
+              className="form-control"
+              id="emailInput"
+              aria-describedby="emailHelp"
+              placeholder="abc@gmail.com"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="phoneNumberInput">휴대폰 번호</label>
+            <input
+              type="text"
+              className="form-control"
+              id="phoneNumberInput"
+              placeholder="010-1234-1234"
+            />
+          </div>
+          <button type="submit"
+          className="btn btn-primary btn-block" 
+          onClick={(e) => this.afterLogin(e.target.nameInput)}
+          >
+            SignUp
+          </button>
+        </form>
+
+      </div>
   );
 }
 
