@@ -10,7 +10,7 @@ const Btn = (props) => {
         <ButtonStyled onClick={submit}>Login</ButtonStyled>
     )
 }
-
+export default Btn;
 // class Btn extends React.Component {
 //     constructor() {
 //         super();
@@ -27,4 +27,3 @@ const Btn = (props) => {
 //     }
 // }
 
-export default Btn;
